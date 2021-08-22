@@ -1,0 +1,52 @@
+[
+  {
+    "bookSourceName": "九桃小说",
+    "bookSourceUrl": "https://www.9txs.org",
+    "bookUrlPattern": "",
+    "ruleBookInfo": {
+      "author": "@css:.detail > p:nth-child(3) > a:nth-child(1)@text",
+      "coverUrl": "@css:.detail > a > img@src",
+      "intro": "@css:.content > p@html",
+      "lastChapter": "@css:.detail > p:nth-child(6) > a@text",
+      "name": "@css:.detail > h1@text",
+      "tocUrl": "@css:.detail > p.action > a:nth-child(1)@href",
+      "wordCount": "@css:.detail > p:nth-child(3)@text@js:result+'字'##.*字数."
+    },
+    "ruleContent": {
+      "content": "@css:#content>p:not(:first-child)@html",
+      "replaceRegex": "##您可以在百度.*查找最新章节！|九桃小说 老域名.*被墙，请您牢记本站最新域名.*"
+    },
+    "ruleExplore": {
+      "author": "@css:.author@text",
+      "bookList": "@css:.library>li",
+      "bookUrl": "@css:.bookname@href",
+      "coverUrl": "@css:img@src",
+      "intro": "@css:p:eq(4)@html",
+      "kind": "@css:p>a:eq(2)@text&&span@text",
+      "lastChapter": "@css:.chapter@text##最新章节.",
+      "name": "@css:.bookname@text",
+      "wordCount": "@css:p:eq(3)@text@js:result+'字'##.*\\|"
+    },
+    "ruleSearch": {
+      "author": "@css:.author@text",
+      "bookList": "@css:.library>li",
+      "bookUrl": "@css:.bookname@href",
+      "coverUrl": "@css:img@src",
+      "intro": "@css:p:eq(4)@html",
+      "kind": "@css:p>a:eq(2)@text&&span@text",
+      "lastChapter": "@css:.chapter@text##最新章节.",
+      "name": "@css:.bookname@text",
+      "wordCount": "@css:p:eq(3)@text##.*\\|"
+    },
+    "ruleToc": {
+      "chapterList": "@css:.read > dl:not(:first-child) > dd > a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "search": {
+      "url": "https://so.9txs.org/www/",
+      "method": "POST",
+      "body": "searchkey={{key}}"
+    }
+  }
+]
